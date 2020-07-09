@@ -74,13 +74,11 @@ function gamePan() {
       }
       bestScoreLab.innerHTML=scores[0];
     });
+  
     player.src=playerPic;
     fullName.innerHTML=playerName+" ";
     $('#fullname').append(`<span id="hearts"><span id="heart1">💓</span><span id="heart2">💓</span><span id="heart3">💓</span></span>`);
     scoreLab.innerHTML+=score;
-
-    bmusic.loop = true;
-    bmusic.play();
 
     if (giude){
       setTimeout(() => {
@@ -169,6 +167,8 @@ function gamePan() {
     containment: '#gamePan',
     start: function( event, ui ) {
       $("#dragIcon").hide();
+      bmusic.loop = true;
+      bmusic.play();
     },
     stop: function( event, ui ) {
       $("#dragIcon").show();
