@@ -167,8 +167,6 @@ function gamePan() {
     containment: '#gamePan',
     start: function( event, ui ) {
       $("#dragIcon").hide();
-      bmusic.loop = true;
-      bmusic.play();
     },
     stop: function( event, ui ) {
       $("#dragIcon").show();
@@ -359,3 +357,4 @@ function endPan(fscore){
 
 // staring the game
 gamePan();
+document.getElementById("sound").click();
