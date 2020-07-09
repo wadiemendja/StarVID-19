@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+#gamePan {
+    position: absolute;
+    background-image: url("img/bg1.gif");
+    overflow: hidden;
+    width: 100%;
+    height: 90%;
+    top: 10%;
+    max-width: 450px;
+}
+
+#player {
+    width: 100%;
+    height: 50%;
+    border: white solid 2px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 5%;
+}
+
+#drag {
+  position: absolute;
+  width: 15%;
+  height: 20%;
+  top: 80%;
+  left: 43%;
+  cursor: pointer;
+}
+
+#dragIcon {
+  position: absolute;
+  width: 30%;
+  height: 25%;
+  left: 35%;
+  top: 70%;
+}
+
+#fingure{
+  width: 10%;
+  height: 10%;
+  position: absolute;
+  top: 95%;
+  left: 60%;
+}
+
+#corona0{top: 0%;}
+#corona1{top: 13%; left:54%;}
+#corona2{top: 26%; left:36%;}
+#corona3{top: 39%; left:18%;}
+#corona4{top: 52%; left:36%;}
+#corona5{top: 65%;}
+#corona6{top: 100%;left: 0%;}
+
+#topPan {
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  background-image: url("img/bg1.gif");
+  max-width: 450px;
+}
+
+#scorePan {
+  position: absolute;
+  width: 35%;
+  height: 65%;
+  top: 1%;
+  left: 1%;
+  border: solid white 2px;
+  border-radius: 5px;
+  padding: 5px;
+  border-style: outset;
+}
+
+#timePan {
+  position: absolute;
+  width: 35%;
+  height: 65%;
+  top: 1%;
+  left: 61%;
+  border: solid white 2px;
+  border-radius: 5px;
+  padding: 5px;
+  border-style: outset;
+}
+
+#fullname {
+  font-family: "Lucida Console", Courier, monospace;
+  color: white;
+  padding: 3px;
+  font-size: 3vw;
+}
+
+#timeLab {
+  font-family: "Lucida Console", Courier, monospace;
+  color: white;
+  padding: 3px;
+  font-size: 3vw;
+}
+
+#scoreLab {
+  font-family: "Lucida Console", Courier, monospace;
+  padding: 3px;
+  color: white;
+  font-size: 3vw;
+}
+
+#bestScoreLab {
+  font-family: "Lucida Console", Courier, monospace;
+  color: white;
+  padding: 3px;
+  font-size: 3vw;
+  margin-top: 2%;
+}
+
+#sound {
+  position: absolute;
+  width: 15%;
+  height: 70%;
+  top: 15%;
+  left: 43%;
+}
+
+#score{position: absolute;}
+#hearts{
+  position: absolute;
+  margin-left: 4%;
+  margin-top: -1%;
+}
+
+#endPan {
+  position: relative;
+  background-image: url("img/bg1.gif");
+  height: 100%;
+  width: 100%;
+  max-width: 450px;
+}
+
+#innerPan {
+  position: absolute;
+  border: 4px solid white;
+  border-radius: 2%;
+  height: 80%;
+  width: 80%;
+  left: 10%;
+  top: 10%;
+  text-align: center;
+  border-style: outset;
+  max-width: 350px;
+}
+
+#fscoreLab {
+  position: absolute;
+  left: 20%;
+  top: 22%;
+  color: white;
+  font-size: 0vw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#bigStar {
+  margin-top: 5%;
+  font-size: 0vw;
+}
+
+#share {
+  position: absolute;
+  top: 87%;
+  left: 30%;
+  width: 45%;
+  height: 5%;
+  color: white;
+  background-color: #008CBA;
+  text-align: center;
+  border-radius: 4px;
+}
+
+#playAgain{
+  position: absolute;
+  top: 77%;
+  left: 30%;
+  width: 45%;
+  height: 5%;
+  color: white;
+  background-color: #008CBA;
+  border-radius: 4px;
+}
+
+#ad{
+  position: absolute;
+  width: 80%;
+  height: 30%;
+  top: 35%;
+  left: 10%;
+  border: solid white 1px;
+  border-radius: 2px;
+  color: white;
+}
+
+p{margin-top: 27%;}
+
+#arrow{
+  color: white;
+  margin-left: 80%;
+  font-size: 10vw;
+  visibility:hidden;
+}
+
+@media screen and (min-width: 500px) {
+  #bestScoreLab, #scoreLab, #timeLab, #fullname{
+    font-size: 2vh;
+  }
+}
