@@ -59,7 +59,7 @@ function gamePan() {
 
     // Get the best score Firebase
     firebaseRef.once('value').then(function(snapshot){
-      DB_best_score=snapshot.val().best_score;
+      DB_best_score=snapshot.val();
       bestScoreLab.innerHTML=DB_best_score
     });
   
