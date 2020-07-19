@@ -14,7 +14,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-var firebaseRef = firebase.database().ref();
+var firebaseRef = firebase.database().ref('best_score');
 var DB_best_score
         
 function gamePan() {
@@ -307,7 +307,7 @@ function endPan(fscore){
     `);
 
     if (fscore > DB_best_score)
-    firebaseRef.update({best_score:fscore});
+    firebaseRef.update([fscore]);
 
     $("#playAgain").on("click",function(){
       $("#endPan").remove();
