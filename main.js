@@ -14,8 +14,8 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-var firebaseRef = firebase.database().ref('scores');
-var scores = [];
+var firebaseRef = firebase.database().ref();
+var DB_best_score
         
 function gamePan() {
 
@@ -59,20 +59,8 @@ function gamePan() {
 
     // Get the best score Firebase
     firebaseRef.once('value').then(function(snapshot){
-      snapshot.forEach(function(child){
-        scores.push(child.val());
-      });
-      var c ; 
-      for(var i= 0 ; i<scores.length ; i++) {
-        for(var j=i+1; j<scores.length;j++){
-          if (scores[i]<scores[j]){
-            c=scores[j];
-            scores[j]=scores[i];
-            scores[i]=c;
-          }
-        }
-      }
-      bestScoreLab.innerHTML=scores[0];
+      DB_best_score=snapshot.val().best_score;
+      bestScoreLab.innerHTML=DB_best_score
     });
   
     player.src=playerPic;
@@ -318,7 +306,8 @@ function endPan(fscore){
       </div>
     `);
 
-    firebaseRef.push(fscore);
+    if (fscore > DB_best_score)
+    firebaseRef.update({best_score:fscore});
 
     $("#playAgain").on("click",function(){
       $("#endPan").remove();
