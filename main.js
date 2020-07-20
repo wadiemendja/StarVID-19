@@ -2,18 +2,6 @@ var playerName = "Player :";
 var playerPic = "img/player.jpg";
 var giude =true;
 
-var firebaseConfig = {
-  apiKey: "AIzaSyDvdMbrCpQEX3wHoV2yq5XoM-V2fZXPQqQ",
-  authDomain: "starvid-19.firebaseapp.com",
-  databaseURL: "https://starvid-19.firebaseio.com",
-  projectId: "starvid-19",
-  storageBucket: "starvid-19.appspot.com",
-  messagingSenderId: "311870930623",
-  appId: "1:311870930623:web:ec323dac66ad2e8a06100a"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
 var firebaseRef = firebase.database().ref('best_score');
 var DB_best_score
         
